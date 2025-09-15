@@ -1,7 +1,15 @@
 #include "reverse-list.hpp"
-#include <unused.hpp>  // TODO: remove before flight.
 
-ListNode* Reverse(ListNode* node) {
-    UNUSED(node);  // TODO: remove before flight.
-    return nullptr;  // TODO: remove before flight.
+ListNode* Reverse(ListNode* head) {
+    ListNode* prev = nullptr;
+    ListNode* curr = head;
+
+    while (curr != nullptr) {
+        ListNode* next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+
+    return prev;
 }
