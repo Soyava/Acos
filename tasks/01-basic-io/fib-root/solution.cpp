@@ -103,5 +103,5 @@ int main() {
         out.push_back('\n');
     }
     write(STDOUT_FILENO, out.data(), out.size());
-    return 0;
+    return 0
 }
